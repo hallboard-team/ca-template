@@ -40,10 +40,10 @@ public class AuthService(IAuthRepository authRepository) : IAuthService
     {
         var login = Login.Create(command.Credential, command.Password);
 
-        var metadata = SessionMetadata.Create(
-            command.SessionMetadata.DeviceType, command.SessionMetadata.DeviceName, command.SessionMetadata.UserAgent,
-            command.SessionMetadata.IpAddress, command.SessionMetadata.Location
-        );
+        // var metadata = SessionMetadata.Create(
+        //     command.SessionMetadata.DeviceType, command.SessionMetadata.DeviceName, command.SessionMetadata.UserAgent,
+        //     command.SessionMetadata.IpAddress, command.SessionMetadata.Location
+        // );
 
         LoginResult loginResult = await authRepository.LoginAsync(login);
 
