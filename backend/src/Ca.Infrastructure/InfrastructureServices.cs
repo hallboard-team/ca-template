@@ -12,17 +12,18 @@ public static class InfrastructureServices
         this IServiceCollection services, IConfiguration config, IHostEnvironment env
     )
     {
-        // MongoDB
-        services.AddConfigsServiceMongo(config);
-        services.AddServiceMongo();
-        services.AddIdentityServiceMongo();
-        services.AddRepositoriesMongo();
-
-        // Postgres
+        //// Postgres
         services.AddConfigsServicePostgres(config);
         services.AddServicePostgres(env);
         // services.AddIdentityServicePostgres(); // TODO add this
         // services.AddRepositoriesPostgres();
+
+
+        //// MongoDB
+        // services.AddConfigsServiceMongo(config);
+        // services.AddServiceMongo();
+        // services.AddIdentityServiceMongo();
+        // services.AddRepositoriesMongo();
 
         return services;
     }
