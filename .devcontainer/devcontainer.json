@@ -1,5 +1,5 @@
 {
-  "name": "dev-${localWorkspaceFolderBasename}_full-pg",
+  "name": "dev-${localWorkspaceFolderBasename}_full",
   "dockerComposeFile": "./docker/docker-compose.full.yml",
   "service": "dev-full-ca",
   "workspaceFolder": "/workspaces/app",
